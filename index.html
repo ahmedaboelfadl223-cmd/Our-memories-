@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذكرياتنا الحلوة - أحمد وهاجر</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #start-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 100;
+        }
+        .play-btn {
+            padding: 15px 40px;
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(216,27,96,0.4);
+            transition: transform 0.3s ease;
+        }
+        .play-btn:hover {
+            transform: translateY(-3px);
+            background-color: #ad1457;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="start-screen">
+        <h1 style="color: #d81b60; margin-bottom: 20px;">في حاجة بسيطة ناقصة... ❤️</h1>
+        <button class="play-btn" onclick="startExperience()">دوسى هنا الأول ✨</button>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+
+    <iframe id="content-frame" src=""></iframe>
+
+    <script>
+        function startExperience() {
+            document.getElementById('start-screen').style.display = 'none';
+            document.getElementById('bg-music').play();
+            document.getElementById('content-frame').src = 'welcome.html';
+        }
+    </script>
+
+</body>
+</html>
