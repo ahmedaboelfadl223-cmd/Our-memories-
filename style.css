@@ -5,11 +5,7 @@ h1{text-align:center;margin:10px 0 25px}
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
 .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;background:#ddd;display:block}
 nav{display:flex;justify-content:center;align-items:center;gap:10px;margin:25px 0 10px;flex-wrap:wrap}
-nav a,.start{display:inline-block;padding:11px 18px;background:#222;color:#fff;text-decoration:none;border-radius:8px}
-nav a:hover,.start:hover{opacity:.85}
-.disabled{padding:11px 18px;background:#ccc;color:#777;border-radius:8px}
+nav a,.disabled{display:inline-block;padding:11px 18px;background:#222;color:#fff;text-decoration:none;border-radius:8px}
+.disabled{background:#ccc;color:#777}
 .counter{text-align:center;color:#777}
-.home{text-align:center;padding-top:20vh}
-.home p{color:#666}
-.start{margin-top:15px}
 @media(max-width:600px){.gallery{grid-template-columns:1fr}}
