@@ -1,11 +1,123 @@
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5;color:#222}
-main{max-width:1000px;margin:auto;padding:25px 15px}
-h1{text-align:center;margin:10px 0 25px}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;background:#ddd;display:block}
-nav{display:flex;justify-content:center;align-items:center;gap:10px;margin:25px 0 10px;flex-wrap:wrap}
-nav a,.disabled{display:inline-block;padding:11px 18px;background:#222;color:#fff;text-decoration:none;border-radius:8px}
-.disabled{background:#ccc;color:#777}
-.counter{text-align:center;color:#777}
-@media(max-width:600px){.gallery{grid-template-columns:1fr}}
+/* إعدادات عامة لكل الموقع */
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------- */
+/* تنسيقات الصفحة الرئيسية وصفحة الختام */
+/* ---------------------------------- */
+.header-card, .letter-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    max-width: 600px;
+    text-align: center;
+    margin: 10vh auto auto auto; /* عشان تكون في نص الشاشة */
+}
+
+.header-card h1, .letter-box h1 {
+    color: #d81b60;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.header-card p, .letter-box p {
+    font-size: 1.3em;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* حركة القلب اللي بينبض */
+.heart-icon, .heart {
+    font-size: 60px;
+    color: #d81b60;
+    margin: 15px 0;
+}
+.heart { animation: heartbeat 1.2s infinite; }
+.heart-icon { animation: float 2s ease-in-out infinite; }
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.3); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.3); }
+    70% { transform: scale(1); }
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ---------------------------------- */
+/* تنسيقات صفحات الصور (من 1 لـ 10) */
+/* ---------------------------------- */
+h2 {
+    color: #d81b60;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.card img, .card video {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.caption {
+    margin-top: 15px;
+    font-size: 1.1em;
+    text-align: center;
+    color: #444;
+    font-weight: bold;
+}
+
+/* ---------------------------------- */
+/* تنسيقات الأزرار في كل الموقع */
+/* ---------------------------------- */
+.start-btn, .next-btn, .back-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 12px 35px;
+    background-color: #d81b60;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 4px 15px rgba(216,27,96,0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.start-btn:hover, .next-btn:hover, .back-btn:hover {
+    background-color: #ad1457;
+    transform: translateY(-3px);
+}
