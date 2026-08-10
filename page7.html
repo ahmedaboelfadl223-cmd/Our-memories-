@@ -1,28 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الصور - الصفحة 2</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة السابعة - ذكرياتنا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; background: linear-gradient(135deg, #fce4ec, #f8bbd0); margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        h2 { color: #d81b60; margin-bottom: 30px; }
+        .gallery { display: flex; flex-direction: column; gap: 30px; max-width: 600px; width: 100%; }
+        .card { background: #fff; padding: 15px; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+        .card img, .card video { width: 100%; border-radius: 10px; max-height: 400px; object-fit: cover; }
+        .caption { margin-top: 15px; font-size: 1.1em; text-align: center; color: #444; font-weight: bold; }
+        .next-btn { margin-top: 40px; margin-bottom: 20px; padding: 12px 35px; background-color: #d81b60; color: white; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 15px rgba(216,27,96,0.3); }
+    </style>
 </head>
 <body>
-  <main>
-    <h1>الصور</h1>
-    <section class="gallery">
-      <img src="images/6.jpg" alt="صورة 6" loading="lazy">
-      <img src="images/7.jpg" alt="صورة 7" loading="lazy">
-      <img src="images/8.jpg" alt="صورة 8" loading="lazy">
-      <img src="images/9.jpg" alt="صورة 9" loading="lazy">
-      <img src="images/10.jpg" alt="صورة 10" loading="lazy">
-    </section>
-
-    <nav>
-      <a href="page1.html">← السابق</a>
-      <a href="index.html">الرئيسية</a>
-      <a href="page3.html">التالي →</a>
-    </nav>
-    <p class="counter">الصفحة 2 من 4</p>
-  </main>
+    <h2>الصفحة السابعة 📖</h2>
+    <div class="gallery">
+        <div class="card">
+            <img src="IMG-20260615-WA0118.jpg" alt="صورة 13">
+            <div class="caption">وردة شايلة ورد 🦦♥<br>كنت قمر يومها يا هجورتي و كان يوم متعب اوي ليا من بدري بس اتبسطت جداً ♥</div>
+        </div>
+        <div class="card">
+            <img src="IMG-20260615-WA0096.jpg" alt="صورة 14">
+            <div class="caption">يوم عيد ميلادي و انتي عزماني عند بلبن و وهمي في الف مسكن 😂♥</div>
+        </div>
+    </div>
+    <a href="page8.html" class="next-btn">الصفحة اللي بعدها ➡️</a>
 </body>
 </html>
